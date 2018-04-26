@@ -39,13 +39,11 @@ function checkCollision(rock) {
 }
 
 function createRock(x) {
+  var top = 0;
   
   const rock = document.createElement('div');
   rock.className = 'rock';
   rock.style.left = `${x}px`;
-  
-  var top = 0;
-
   rock.style.top = top;
 
   function moveRock() {
@@ -57,15 +55,11 @@ function createRock(x) {
     moveRock();
   }
 
-  // We should kick of the animation of the rock around here
+  const rockMoveInterval = setInterval(moveRock, 2000);
+
+  ROCKS.push(rock);
   
-
-  // Add the rock to ROCKS so that we can remove all rocks
-  // when there's a collision
-  ROCKS.push(rock)
-
-  // Finally, return the rock element you've created
-  return rock
+  return rock;
 }
 
 /**
