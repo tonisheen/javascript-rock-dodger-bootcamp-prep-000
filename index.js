@@ -1,6 +1,3 @@
-/**
- * Don't change these constants!
- */
 const DODGER = document.getElementById('dodger');
 const GAME = document.getElementById('game');
 const GAME_HEIGHT = 400;
@@ -11,11 +8,6 @@ const ROCKS = [];
 const START = document.getElementById('start');
 
 var gameInterval = null;
-
-/**
- * Be aware of what's above this line,
- * but all of your work should happen below.
- */
 
 function checkCollision(rock) {
   // Get the rock's distance from the top
@@ -56,7 +48,6 @@ function createRock(x) {
 
   rock.style.top = top;
 
-  // move rock 2 pixels at a time
   function moveRock() {
     
     if (checkCollision(rock)) { endGame() }
