@@ -56,7 +56,7 @@ function createRock(x) {
     window.requestAnimationFrame(moveRock);
   }
 
-  const rockMoveInterval = setInterval(moveRock, 2000);
+  window.requestAnimationFrame(moveRock);
 
   ROCKS.push(rock);
   
