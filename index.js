@@ -69,7 +69,9 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  alert()
+  gameInterval = null;
+  for (var rock in ROCKS) { rock.re}
+  alert('YOU LOSE!');
 }
 
 function moveDodger(e) {
