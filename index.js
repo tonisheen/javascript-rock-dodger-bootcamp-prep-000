@@ -22,14 +22,14 @@ function checkCollision(rock) {
     const rockRightEdge = rockLeftEdge + 20;    // The rock is 20 pixel's wide
 
     var collided = (
-      ((rockLeftEdge < dodgerLeftEdge) && 
-      (rockRightEdge > dodgerLeftEdge))
+      ((rockLeftEdge <= dodgerLeftEdge) && 
+      (rockRightEdge >= dodgerLeftEdge))
       ||
-      ((rockLeftEdge > dodgerLeftEdge) &&
-      (rockRightEdge < dodgerRightEdge))
+      ((rockLeftEdge >= dodgerLeftEdge) &&
+      (rockRightEdge <= dodgerRightEdge))
       ||
-      ((rockLeftEdge < dodgerRightEdge) &&
-      (rockRightEdge > dodgerRightEdge))
+      ((rockLeftEdge <= dodgerRightEdge) &&
+      (rockRightEdge >= dodgerRightEdge))
       );
       
     return collided;
