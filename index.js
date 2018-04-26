@@ -93,11 +93,11 @@ function moveDodgerRight() {
 }
 
 function positionToInteger(p) {
-  return parseInt(p.split('px')[0]) || 0
+  return parseInt(p.split('px')[0]) || 0;
 }
 
 function start() {
-  window.addEventListener('keydown', moveDodger)
+  window.addEventListener('keydown', moveDodger);
 
   START.style.display = 'none'
 
