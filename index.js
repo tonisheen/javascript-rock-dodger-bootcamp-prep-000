@@ -57,8 +57,10 @@ function createRock(x) {
 
   // move rock 2 pixels at a time
   function moveRock() {
-    if ()
-
+    if (top === 400) { }
+    if (checkCollision(rock)) {endGame()}
+    top += 2;
+    
     /**
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
