@@ -57,19 +57,14 @@ function createRock(x) {
 
   // move rock 2 pixels at a time
   function moveRock() {
-    if (top === 400) { }
-    if (checkCollision(rock)) {endGame()}
-    top += 2;
     
-    /**
-     * Otherwise, if the rock hasn't reached the bottom of
-     * the GAME, we want to move it again.
-     */
-
-    /**
-     * But if the rock *has* reached the bottom of the GAME,
-     * we should remove the rock from the DOM
-     */
+    if (checkCollision(rock)) { endGame() }
+    if (top === 380) { rock.remove(); return; }
+    
+    top += 2;
+    moveRock();
+    
+    return;
   }
 
   // We should kick of the animation of the rock around here
