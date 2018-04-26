@@ -10,10 +10,9 @@ const START = document.getElementById('start');
 var gameInterval = null;
 
 function checkCollision(rock) {
-  // Get the rock's distance from the top
+  
   const top = positionToInteger(rock.style.top);
 
-  // If the rock has reached the dodger's vertical level check for collision
   if (top > 360) {
     
     const dodgerLeftEdge = positionToInteger(DODGER.style.left);
@@ -35,6 +34,7 @@ function checkCollision(rock) {
       
     return collided;
   }
+  
   return;
 }
 
@@ -64,16 +64,10 @@ function createRock(x) {
   return rock;
 }
 
-/**
- * End the game by clearing `gameInterval`,
- * removing all ROCKS from the DOM,
- * and removing the `moveDodger` event listener.
- * Finally, alert "YOU LOSE!" to the player.
- */
 function endGame() {
   gameInterval = null;
   for (var rock in ROCKS) { rock.remove() }
-  
+  document.removeEventListener('keydown', moveDodger);
   alert('YOU LOSE!');
 }
 
