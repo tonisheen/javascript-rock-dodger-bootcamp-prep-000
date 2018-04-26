@@ -70,7 +70,8 @@ function createRock(x) {
  */
 function endGame() {
   gameInterval = null;
-  for (var rock in ROCKS) { rock.re}
+  for (var rock in ROCKS) { rock.remove() }
+  
   alert('YOU LOSE!');
 }
 
