@@ -2,8 +2,8 @@ const DODGER = document.getElementById('dodger');
 const GAME = document.getElementById('game');
 const GAME_HEIGHT = 400;
 const GAME_WIDTH = 400;
-const LEFT_ARROW = 37; // use e.which!
-const RIGHT_ARROW = 39; // use e.which!
+const LEFT_ARROW = 37;
+const RIGHT_ARROW = 39;
 const ROCKS = [];
 const START = document.getElementById('start');
 
@@ -72,15 +72,8 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  // implement me!
-  /**
-   * This function should call `moveDodgerLeft()`
-   * if the left arrow is pressed and `moveDodgerRight()`
-   * if the right arrow is pressed. (Check the constants
-   * we've declared for you above.)
-   * And be sure to use the functions declared below!
-   */
-   if (e.which === )
+   if (e.which == LEFT_ARROW) { moveDodgerLeft() }
+   if (e.which == RIGHT_ARROW) { moveDodgerRight() }
 }
 
 function moveDodgerLeft() {
@@ -89,6 +82,7 @@ function moveDodgerLeft() {
    * This function should move DODGER to the left
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
+   
 }
 
 function moveDodgerRight() {
