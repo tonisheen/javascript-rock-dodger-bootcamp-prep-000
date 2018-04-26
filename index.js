@@ -44,7 +44,7 @@ function createRock(x) {
   const rock = document.createElement('div');
   rock.className = 'rock';
   rock.style.left = `${x}px`;
-  rock.style.top = top;
+  rock.style.top = `${top}px`;
 
   function moveRock() {
     
@@ -52,6 +52,8 @@ function createRock(x) {
     if (top === 380) { rock.remove(); return; }
     
     top += 2;
+    rock.style.top = `${top}px`;
+    
     moveRock();
   }
 
