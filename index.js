@@ -53,7 +53,7 @@ function createRock(x) {
     
     rock.style.top = `${top += 2}px`;
     
-    window.requestAnimationFrame(moveRock());
+    window.requestAnimationFrame(moveRock);
   }
 
   const rockMoveInterval = setInterval(moveRock, 2000);
